@@ -63,5 +63,14 @@ public class SubscribeForMessageTest {
         }
     }
 
+    @Test
+    public void should_not_allow_null_as_message_to_subscribe_to(){
+        PubSubHub hub = new PubSubHub();
+        try {
+            hub.subscribeFor(null, mock(MessageListener.class));
+            fail();
+        } catch (SubscribtionException e) {
+        }
+    }
 }
 

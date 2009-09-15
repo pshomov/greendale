@@ -8,6 +8,7 @@ public class PubSubHub {
 
     public <T> void subscribeFor(Class<T> messageClass, MessageListener<T> messageListener) {
         if (messageListener == null) throw new SubscribtionException("Message listeners cannot be null");
+        if (messageClass == null) throw new SubscribtionException("Message class cannot be null");
 
         Set<MessageListener> listeners = messageSubscriptions.get(messageClass);
         if (listeners == null) {
