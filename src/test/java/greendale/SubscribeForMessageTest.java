@@ -1,8 +1,11 @@
-package org.greendale;
+package greendale;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
+import greendale.MessageListener;
+import greendale.PubSubHub;
+import greendale.SubscribtionException;
 
 public class SubscribeForMessageTest {
 

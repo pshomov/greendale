@@ -1,4 +1,4 @@
-package org.greendale;
+package greendale;
 
 import java.util.HashMap;
 import java.util.HashSet;

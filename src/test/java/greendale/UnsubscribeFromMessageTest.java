@@ -1,4 +1,4 @@
-package org.greendale;
+package greendale;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
