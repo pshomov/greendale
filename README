@@ -1,0 +1,22 @@
+This project aims to create a simple solution for the problem of class invoking directly methods of other classes. This
+ is a clasical point-to-point vs publish/subscribe integration.
+
+ The features of Greendale are the following
+  * statically typed message subscription - using the strong side of statically typed languages this allows for
+  extra safety when handling messages
+  * XML free - all configuration is done in java
+  * über simple - look at the code, it is so simple you could write it yourself ;) (but please don't, use Greendale instead ;) )
+
+ The advantages of Greendale:
+  * Fewer dependencies for your code - You do not call some method on some class to do something for you but rather you "broadcast" what is going on and that method
+  gets invoked by those listening for your message
+  * Easier to test - this is a result of the previous benefit but is important enought I think to desrve its own item. You do
+  not need inject dependencies that are mocks of the real ones when testing. All you need is to follow the messages, the class you are
+    testing, publishes. I think it will also help you keep your tests a lot more focused
+
+  The benefits of Greendale:
+  * Your classes become more independent and therefore more reusable
+  * Less code - you will need less dependencies and this means fewer interfaces and fewer setters
+  * You will be more willing to do tests - if it is easier to test then you will be looking forward to it, right ;)
+
+The name: Greendale is the village where the postman Pat lives and works.
