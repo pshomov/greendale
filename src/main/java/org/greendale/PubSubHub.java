@@ -29,4 +29,10 @@ public class PubSubHub {
             }
         }
     }
+
+    public <T> void unsubscribeFrom(Class<T> messageClass, MessageListener<T> messageListener) {
+        final Set<MessageListener> messageListenerSet = messageSubscriptions.get(messageClass);
+        if (messageListenerSet == null) throw new SubscribtionException("No subscriptions found for "+messageClass);
+        if (!messageListenerSet.remove(messageListener)) throw new SubscribtionException("Message listener "+messageListener+" has not subscribed for message"+messageClass);
+    }
 }
